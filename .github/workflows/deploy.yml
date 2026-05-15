@@ -27,25 +27,23 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
-          cache-dependency-path: v2/package-lock.json
 
       - name: Install dependencies
-        run: cd v2 && npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Build CV (LaTeX)
         run: |
-          cd v2
           mkdir -p public
           pdflatex -interaction=nonstopmode -output-directory=public src/cv/modern_template.tex
           mv public/modern_template.pdf public/resume.pdf
 
       - name: Build Astro Site
-        run: cd v2 && npm run build
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: v2/dist
+          path: dist
 
   deploy:
     environment:

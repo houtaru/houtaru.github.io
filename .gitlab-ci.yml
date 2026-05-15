@@ -1,4 +1,4 @@
-# GitLab CI/CD Pipeline for Houtaru Portfolio v2
+# GitLab CI/CD Pipeline for Houtaru Portfolio
 # This pipeline builds the PDF using pdflatex (LaTeX) and the Astro site.
 
 stages:
@@ -15,9 +15,8 @@ build_job:
   before_script:
     - # Install LaTeX dependencies
     - apt-get update && apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-latex-recommended
-    - cd v2
     - # Install Node deps
-    - npm install
+    - npm install --legacy-peer-deps
   script:
     - # Build the PDF using pdflatex
     - npm run build:cv
@@ -25,7 +24,7 @@ build_job:
     - npm run build
   artifacts:
     paths:
-      - v2/dist/
+      - dist/
     expire_in: 1 week
 
 # Job to deploy to GitLab Pages
@@ -34,7 +33,7 @@ pages:
   image: alpine:latest
   script:
     - mkdir -p public
-    - cp -r v2/dist/* public/
+    - cp -r dist/* public/
   artifacts:
     paths:
       - public
