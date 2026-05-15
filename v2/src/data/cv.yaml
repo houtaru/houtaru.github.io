@@ -13,6 +13,8 @@ education:
     degree: "Bachelor's Degree in Computer Science"
     location: "HCMC, VN"
     date: "2018 -- 2022"
+    details:
+      - "Published 2 research papers in AI (SRGAN & Video Classification) at NAFOSTED NICS and MediaEval 2020."
 
 experience:
   - company: "Zalo"
@@ -36,14 +38,6 @@ experience:
       - "Maintained tool used for analysing user behavior based on given metric log."
       - "Technologies: Java, Memcached, Python, Hadoop, Spark, MySQL."
 
-  - company: "Free Contest"
-    role: "Backend Developer"
-    location: "Remote"
-    date: "Oct 2020 -- Jun 2021"
-    details:
-      - "Designed and developed APIs server."
-      - "Technologies: TypeScript, ExpressJS, MySQL."
-
 skills:
   - category: "Languages"
     list: ["C/C++", "Python", "Java", "Go", "SQL"]
@@ -65,16 +59,9 @@ honours:
     date: "2018"
 
 projects:
+  - title: "Free Contest"
+    date: "2020 -- 2021"
+    description: "Backend Developer & Problem Setter. Designed and developed API servers (TypeScript, ExpressJS, MySQL) and prepared competitive programming problems for weekly contests."
   - title: "cowboycoder.tech"
     date: "2018"
     description: "A website sharing problem solution and code, as well as series of learning tips written or translated in Vietnamese."
-
-publications:
-  - title: "SRGAN with Total Variation Loss in Face Super-Resolution"
-    date: "2020"
-    authors: "Hai Nguyen-Truong, Khoa N. A. Nguyen, San Cao"
-    venue: "7th NAFOSTED Conference on Information and Computer Science (NICS)"
-  - title: "HCMUS at MediaEval 2020: Ensembles of Temporal Deep Neural Networks for Table Tennis Strokes Classification Task"
-    date: "2020"
-    authors: "Hai Nguyen-Truong, San Cao, N. A. Khoa Nguyen, Bang-Dang Pham, et al."
-    venue: "The MediaEval 2020 Multimedia Evaluation Workshop"

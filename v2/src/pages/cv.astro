@@ -7,10 +7,10 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
 ---
 
 <BaseLayout title="Curriculum Vitae" description={`Professional resume of ${cv.fullName}`}>
-	<article class="space-y-16">
-		<header class="border-b border-sys-text/5 pb-12">
-			<h1 class="font-serif italic text-4xl mb-4">{cv.fullName}</h1>
-			<p class="text-sys-muted font-sans text-sm uppercase tracking-[0.2em] mb-8">{cv.title}</p>
+	<article class="space-y-10">
+		<header class="border-b border-sys-text/5 pb-6">
+			<h1 class="font-serif italic text-4xl mb-1">{cv.fullName}</h1>
+			<p class="text-sys-muted font-sans text-xs uppercase tracking-[0.2em] mb-4">{cv.title}</p>
 			
 			<div class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-sans text-sys-muted">
 				<span class="flex items-center gap-2">
@@ -70,12 +70,12 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
 							<h3 class="font-serif italic text-xl">{edu.school}</h3>
 							<span class="font-sans text-xs text-sys-muted">{edu.date}</span>
 						</div>
-						<p class="font-sans text-sm text-sys-text mb-4">{edu.degree}</p>
+						<p class="font-sans text-sm text-sys-text mb-2">{edu.degree}</p>
 						{edu.details && (
-							<ul class="list-none p-0 space-y-1">
+							<ul class="list-none p-0 space-y-2 mb-4">
 								{edu.details.map((detail) => (
-									<li class="text-xs text-sys-muted italic flex gap-2">
-										<span>•</span>
+									<li class="text-sm text-sys-muted italic flex gap-3 leading-relaxed">
+										<span class="text-sys-accent/40">—</span>
 										<span>{detail}</span>
 									</li>
 								))}
@@ -104,23 +104,20 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
 			</div>
 		</section>
 
-		{cv.publications && (
-			<section>
-				<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Publications</h2>
-				<div class="space-y-8">
-					{cv.publications.map((pub) => (
-						<div>
-							<div class="flex justify-between items-baseline mb-2">
-								<h3 class="font-serif italic text-lg">{pub.title}</h3>
-								<span class="font-sans text-xs text-sys-muted">{pub.date}</span>
-							</div>
-							<p class="font-sans text-xs text-sys-text mb-1">{pub.authors}</p>
-							<p class="font-sans text-[10px] text-sys-accent uppercase tracking-wider">{pub.venue}</p>
+		<section>
+			<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Projects</h2>
+			<div class="space-y-6">
+				{cv.projects?.map((project) => (
+					<div class="flex justify-between items-start gap-4">
+						<div class="space-y-1">
+							<h3 class="font-serif italic text-lg">{project.title}</h3>
+							<p class="text-sm text-sys-text/80 leading-relaxed">{project.description}</p>
 						</div>
-					))}
-				</div>
-			</section>
-		)}
+						<span class="font-sans text-xs text-sys-muted shrink-0 mt-1">{project.date}</span>
+					</div>
+				))}
+			</div>
+		</section>
 
 		<section>
 			<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Honours</h2>
@@ -135,7 +132,7 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
 		</section>
 
 		<div class="pt-12 flex justify-center">
-			<a href={`${import.meta.env.BASE_URL}/resume.pdf`} class="flex items-center gap-3 font-sans text-xs uppercase tracking-widest bg-sys-accent text-white px-8 py-4 rounded-full hover:bg-sys-accent/80 transition-all no-underline shadow-lg shadow-sys-accent/20">
+			<a href={`${import.meta.env.BASE_URL}/resume.pdf`} class="flex items-center gap-3 px-12 py-4 bg-sys-text text-sys-bg font-mono font-bold text-[12px] uppercase tracking-widest hover:bg-sys-accent hover:text-white transition-all no-underline shadow-2xl shadow-sys-accent/20">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
 				Download PDF Version
 			</a>

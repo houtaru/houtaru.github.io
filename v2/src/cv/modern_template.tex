@@ -25,13 +25,12 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
-\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{classic} % CV theme
+\moderncvcolor{blue} % CV color
 
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-\usepackage[scale=.85]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\usepackage[scale=0.85, top=1.5cm, bottom=1.5cm]{geometry} % Optimized margins
+\setlength{\hintscolumnwidth}{2.5cm} % Slightly narrower date column to give more room for text
+\nopagenumbers{} % Ensure no page numbers interfere with space
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -178,6 +177,7 @@
 
 
 \makecvtitle
+\vspace*{-1.5em}
 
 
 
@@ -188,7 +188,7 @@
 
 \section{Education}
 
-\cventry{2018--2022}{Vietnam National University Ho Chi Minh City - University of Science}{}{}{}{Bachelor’s Degree in Computer Science}  % Arguments not required can be left empty
+\cventry{2018--2022}{Vietnam National University Ho Chi Minh City - University of Science}{}{}{}{Bachelor’s Degree in Computer Science\\ \textit{Published 2 research papers in AI (SRGAN \& Video Classification) at NAFOSTED NICS and MediaEval 2020.}}
 
 %\cventry{2015--2018}{Bao Loc High School for the Gifted}{}{}{}{}
 
@@ -211,17 +211,6 @@
 %----------------------------------------------------------------------------------------
 
 \section{Work Experience}
-% \cventry{2017--Present}{Problemsetter}{Free Contest}{}{}{Prepare problems in weekly contest, held for high school student }
-
-% \cventry{2017-2019}{Teaching Assis}{}{}{}{}
-
-% \cventry{Jan 2022 - Apr 2022}{Back End Engineer}{Employment Hero}{}{}
-% {
-%     \begin{itemize}
-%         \item Maintained file service which provides APIs for other services to interact with AWS S3.
-%         \item Technologies: Ruby, Rails, Docker, Kafka, PostgreSQL.
-%     \end{itemize}
-% }
 
 \cventry{May 2022 -- Present}{Software Engineer (Distributed Systems)}{Zalo}{HCMC}{}{
   \begin{itemize}
@@ -234,8 +223,7 @@
   \end{itemize}
 }
 
-\cventry{May 2021 - Nov 2021}{Software Engineer Intern}{VNG Corpation}{}{}
-{
+\cventry{May 2021 -- Nov 2021}{Software Engineer Intern}{VNG Corporation}{HCMC}{}{
     \begin{itemize}
         \item Developed new features and maintained a card-games called Truco for Argentinians on server side.
         \item Maintained tool used for analysing user behavior based on given metric log.
@@ -243,169 +231,26 @@
     \end{itemize}
 }
 
-\cventry{Oct 2020 - Jun 2021}{Backend Developer}{Free Contest}{}{}
-{
-\begin{itemize}
-    \item Designed and developed APIs server.
-    \item Technologies: TypeScript, ExpressJS, MySQL.
-\end{itemize}
-}
-
-% \cventry{Sep 2020 - Present}{Volunteer Researcher}{SELab}{University of Science}{VNU-HCM}{}
-
-%----------------------------------------------------------------------------------------
-%	Skills SECTION
-%----------------------------------------------------------------------------------------
-
 \section{Skills}
-\renewcommand{\listitemsymbol}{-~}
-% {\small
-% \cvitem{Programming Languages}{Java, C, C++, Python, Javascript}
-% \cvitem{Operating Systems}{Linux, Windows}
-% \cvitem{Tools}{Android Studio, IntelliJ, Octave }
-% \cvitem{}{high}
-% \par}
 \cvitem{}{
     \begin{itemize}
-        \item \textbf{Languages:} C/C++, Python, Java.
-        \item \textbf{Technologies:} Linux, Docker, Prometheus, Thanos, Apache Thrift.
+        \item \textbf{Languages:} C/C++, Python, Java, Go, SQL.
+        \item \textbf{Technologies:} Linux, Docker, Prometheus, Thanos, Apache Thrift, Kafka.
         \item \textbf{Core Technologies:} Distributed Systems, Data Structures/Algorithms, System Reliability Engineering.
-        \item Highly experienced with \textbf{algorithm} and \textbf{data structures}.
     \end{itemize}
 }
 
-%----------------------------------------------------------------------------------------
-%	Honour and Awards SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Honours and Awards}
-\cventry{2021}{Top 10 in AIOT Innovation Works}{HCMC}{}{}{
-Worked with a team of 4 developing a proctoring system to help bring fairness in academics.
-}
-\cventry{2020}{Fourth prize in AI Challenge of AISocha 2020}{HCMC}{}{}{
-A 3-week challenge about counting the number of vehicles in each type of vehicle moving in different directions in Ho Chi Minh City.
-}
-\cventry{2018}{Second Prize in ACM-ICPC Vietnam Southern Provincial Contest.}{}{}{}{Provincial competition among \textbf{over 300 teams}, each consists of 3 university students from Vietnam, solving algorithm and data structure problems using various programming languages such as C++ and Java.}
-\cventry{2018}{Third Prize in Vietnamese National Olympiad in Informatics.}{}{}{}{Individual competition among high school students to solve data structures and algorithm problems using C++.}
-% \cventry{2020}{Top 17 in ICPC Vietnam Southern Provincial Programming Contest
-% }{}{}{}{Provincial competition among \textbf{over 300 teams}, each consists of 3 university students from Vietnam, solving algorithm and data structure problems using various programming languages such as C++ and Python.}
-
-
-%----------------------------------------------------------------------------------------
-%	Masters SECTION
-%----------------------------------------------------------------------------------------
-
-%\section{Masters Thesis}
-
-%\cvitem{Title}{\emph{Technologies and characterization of ferroelectric polymers for biomedical sensors}}
-%\cvitem{Supervisors}{Professor Antonino Fiorillo}
-%\cvitem{Description}{This thesis is based on the implementation of a temperature sensor.}
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
 \section{Projects}
-
+\cventry{2020 -- 2021}{Free Contest}{Backend Developer \& Problem Setter}{}{}{Designed and developed API servers (TypeScript, ExpressJS, MySQL) and prepared competitive programming problems for weekly contests.}
 \cventry{2018}{cowboycoder.tech}{}{}{}{
 A website sharing problem solution and code, as well as series of learning tips written or
 translated in Vietnamese.}
 
-\section{Publications}
-
-\cventry{2020}{SRGAN with Total Variation Loss in Face Super-Resolution}{Hai Nguyen-Truong, Khoa N. A. Nguyen, San Cao}{}{}
-{Published in 2020 7th NAFOSTED Conference on Information and Computer Science (NICS)
-}
-
-\cventry{2020}{HCMUS at MediaEval 2020: Ensembles of Temporal Deep Neural
-Networks for Table Tennis Strokes Classification Task}{Hai Nguyen-Truong, San Cao, N. A. Khoa Nguyen, Bang-Dang Pham, Hieu Dao, Minh-Quan Le, Hoang-Phuc Nguyen-Dinh, Hai-Dang Nguyen and Minh-Triet Tran}{}{}{
-Published in The MediaEval 2020 Multimedia Evaluation Workshop}
-
-
-%------------------------------------------------
-
-
-%\section{Major Courses Undertaken}
-
-%\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
-%{\small
-%\cvitem{Computer Science}{ Computer Graphics and Multimedia, Artificial Intelligence, Design and Analysis of Algorithms, Theory of Computation, Operating Systems, Programming Languages, Database Management System, Computer Architecture, Discrete Mathematics, Data Structures.
-%}
-
-%\cvitem{Mathematics}{ Statistical Methods, Probability, Differential Calculus, Linear Algebra, Matrix Theory, Complex Analysis, Vector Calculus.
-%}
-%\par}
-
-%----------------------------------------------------------------------------------------
-%	Coursework SECTION
-%----------------------------------------------------------------------------------------
-
-% \section{Certificates and Workshop}
-% {\small
-% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
-
-% \cvitem{1}{\textbf {CodeChef Certified Data Structure and Algorithms Programme (CCDSAP)-}
-% I won \textbf {scholarship} to give CCDSAP foundation exam held on it on 19th November 2017.  I passed the CCDSAP foundation exam.}
-
-
-% \cvitem{2}{ Attended one day workshop on \textbf {Angular.js and React} by Brain Mentors.}
-
-% \cvitem{3}{ Attended one day workshop on \textbf {Machine Learning using Python} by Brain Mentors.}
-
-
-% \par}
-
-%----------------------------------------------------------------------------------------
-%	COMMUNICATION SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
-%\section{Communication Skills}
-
-%\cvitem{2010}{Oral Presentation at the California Business Conference}
-%\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
-%----------------------------------------------------------------------------------------
-
-% \section{Languages}
-% \cvitemwithcomment{Vietnamese}{Native}{}
-% \cvitemwithcomment{English}{Professional}{}
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
-%----------------------------------------------------------------------------------------
-
-
-
-
-% \section{Interests}
-
-% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
-% \cvlistdoubleitem{Piano}{}
-% \cvlistitem{Baseball}
-
-%----------------------------------------------------------------------------------------
-%	COVER LETTER
-%----------------------------------------------------------------------------------------
-
-% To remove the cover letter, comment out this entire block
-
-%\clearpage
-
-%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-%\date{\today} % Letter date
-%\opening{Dear Sir or Madam,} % Opening greeting
-%\closing{Sincerely yours,} % Closing phrase
-%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-
-%\makelettertitle % Print letter title
-
-%\lipsum[1-3] % Dummy text
-
-%\makeletterclosing % Print letter signature
-
-%----------------------------------------------------------------------------------------
+\section{Honours and Awards}
+\cventry{2021}{Top 10 in AIOT Innovation Works}{HCMC}{}{}{}
+\cventry{2020}{Fourth prize in AI Challenge of AISocha 2020}{HCMC}{}{}{}
+\cventry{2018}{Second Prize in ACM-ICPC Vietnam Southern Provincial Contest}{}{}{}{}
+\cventry{2018}{Third Prize in Vietnamese National Olympiad in Informatics}{}{}{}{}
 
 \end{document}
 
