@@ -1,0 +1,57 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '@fontsource/geist-sans/400.css';
+import '@fontsource/geist-sans/700.css';
+import '@fontsource/geist-mono';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "San Cao (houtaru) - Systems Engineer" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | San (The) Cao</title>
+		<meta name="description" content={description} />
+		<ClientRouter />
+	</head>
+	<body>
+		<div class="max-w-5xl mx-auto px-4 md:px-8 py-12">
+			<header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-24 sys-reveal">
+				<div class="space-y-1">
+					<a href="/" class="font-mono font-bold text-xl tracking-tighter uppercase">San (The) Cao</a>
+					<div class="font-mono text-[10px] text-sys-dim uppercase tracking-widest">Systems Engineer • Distributed State</div>
+				</div>
+				<nav class="flex gap-6 font-mono text-[11px] font-bold uppercase tracking-widest text-sys-dim">
+					<a href="/cv" class="hover:text-sys-text transition-colors">CV</a>
+					<a href="/projects" class="hover:text-sys-text transition-colors">Project</a>
+					<a href="/blog" class="hover:text-sys-text transition-colors">Blog</a>
+				</nav>
+			</header>
+			
+			<main>
+				<slot />
+			</main>
+
+			<footer class="mt-32 pt-12 border-t border-sys-border flex flex-col md:flex-row justify-between items-start gap-8 sys-reveal">
+				<div class="font-mono text-[11px] text-sys-dim">
+					&copy; 2026 San Cao. Built for performance.
+				</div>
+				<div class="flex gap-8 font-mono text-[11px] font-bold uppercase tracking-widest text-sys-dim">
+					<a href="https://github.com/houtaru" target="_blank" class="hover:text-sys-text transition-colors">GH</a>
+					<a href="https://linkedin.com/in/thesancao" target="_blank" class="hover:text-sys-text transition-colors">LI</a>
+					<a href="mailto:caothesan@gmail.com" class="hover:text-sys-text transition-colors">Mail</a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
