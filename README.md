@@ -1,43 +1,61 @@
-# Astro Starter Kit: Minimal
+# San (The) Cao — 2026 System-Native Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
+The high-performance, developer-centric portfolio of **San (The) Cao**. Rebuilt in 2026 with a "System-Native" aesthetic: monochromatic, high information density, and console-inspired.
+
+## 🚀 Overview
+This repository serves as both a static portfolio and an automated professional identity management system. It features a single-source-of-truth data model that powers both the web experience and a print-ready LaTeX resume.
+
+- **URL:** [https://houtaru.github.io/](https://houtaru.github.io/)
+- **Tech Stack:** Astro 5.4, Tailwind CSS 4, LaTeX (`moderncv`)
+- **Design Philosophy:** Monochromatic (#0A0A0A / #EDEDED), Geist typography, sharp edges, and terminal-inspired interactive elements.
+
+## 🛠 Key Features
+- **Automated CV Pipeline:** `src/data/cv.yaml` acts as the master data source. Changes here automatically sync to the web CV and the generated PDF.
+- **LaTeX Integration:** A custom build script compiles a professional 1-page `resume.pdf` using `pdflatex`.
+- **System-Native UI:** Designed for high information density and technical clarity, utilizing Geist Mono for data and Geist Sans for UI components.
+- **Legacy Archive:** The original 2017 portfolio is preserved in `legacy_archive/`.
+
+## 📁 Project Structure
+- `src/data/cv.yaml`: **The Master File.** All professional data lives here.
+- `src/cv/modern_template.tex`: The LaTeX template for the PDF resume.
+- `src/pages/`: Astro components for the web views.
+- `public/resume.pdf`: The generated PDF artifact.
+- `scripts/`: Utility scripts for the build pipeline.
+
+## 🏗 Development & Build
+
+### Prerequisites
+- **Node.js:** v22+
+- **TeX Live:** Required for generating the PDF resume (`pdflatex`).
+
+### Installation
+```bash
+npm install --legacy-peer-deps
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+### Local Development
+```bash
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Build Pipeline
+The project uses a consolidated build process to ensure the PDF and Web assets are always in sync.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+# Full Build (PDF + Astro Site)
+npm run build:all
 
-Any static assets, like images, can be placed in the `public/` directory.
+# Build CV PDF only
+npm run build:cv
 
-## 🧞 Commands
+# Build Astro Site only
+npm run build
+```
 
-All commands are run from the root of the project, from a terminal:
+## 🚢 Deployment
+Deployment is automated via **GitHub Actions**. The pipeline handles the LaTeX compilation and Astro build before deploying to GitHub Pages.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+**Note:** Ensure the GitHub Pages source is set to **"GitHub Actions"** in the repository settings to bypass the legacy Jekyll builder.
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+*Identity: San (The) Cao — Backend Infrastructure & DB Reliability*
