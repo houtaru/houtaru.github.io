@@ -1,0 +1,32 @@
+{
+  "name": "v2",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "build:cv": "pdflatex -interaction=nonstopmode -output-directory=public src/cv/modern_template.tex && mv public/modern_template.pdf public/resume.pdf",
+    "build:all": "npm run build:cv && npm run build"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/tailwind": "^6.0.0",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@tailwindcss/typography": "^0.5.16",
+    "astro": "^5.4.1",
+    "js-yaml": "^4.1.0",
+    "lucide-astro": "^0.477.0",
+    "tailwindcss": "^4.0.9",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.13.9"
+  }
+}

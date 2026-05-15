@@ -1,0 +1,80 @@
+name: "San Cao"
+fullName: "San (The) Cao"
+title: "Backend Infrastructure Engineer"
+location: "Ho Chi Minh City, Vietnam"
+email: "caothesan@gmail.com"
+github: "houtaru"
+linkedin: "thesancao"
+summary: |
+  Backend Infrastructure Engineer specialized in Database Reliability, High-Performance Messaging, and Observability. Expert in developing core infrastructure tools for large-scale data systems, including 18TB/day backup agents, zero-downtime migration protocols, and sub-second observability pipelines for 1,000+ DB clusters. Highly experienced with algorithms and data structures.
+
+education:
+  - school: "Vietnam National University Ho Chi Minh City - University of Science"
+    degree: "Bachelor's Degree in Computer Science"
+    location: "HCMC, VN"
+    date: "2018 -- 2022"
+
+experience:
+  - company: "Zalo"
+    role: "Software Engineer (Distributed Systems)"
+    location: "HCMC"
+    date: "May 2022 -- Present"
+    details:
+      - "Built automated cross-DC replication for 1,000+ in-house DB clusters, achieving 99.9% consistency and enabling warm-standby DR."
+      - "Designed metrics ingestion pipeline at ~1M samples/sec with ~10s anomaly detection; architected Thanos long-term store, cutting query latency 40% and storage cost 3.5x."
+      - "Encryption: added in-memory encryption to Memcached, securing PII for 70M+ MAU with <2% latency impact."
+      - "Backup & Restore: engineered daily 10TB+ backup flow with automated recoverability tests and snapshot drift metrics vs prod/previous."
+      - "Hermetic Build: created reproducible build pipeline from source to binary, deployed to 2,000+ DB nodes with zero-drift releases."
+      - "Stack: C++, Java, Linux, Prometheus, Thanos, Grafana, Apache Thrift, Docker, Kubernetes."
+
+  - company: "VNG Corporation"
+    role: "Software Engineer Intern"
+    location: "HCMC"
+    date: "May 2021 -- Nov 2021"
+    details:
+      - "Developed new features and maintained a card-games called Truco for Argentinians on server side."
+      - "Maintained tool used for analysing user behavior based on given metric log."
+      - "Technologies: Java, Memcached, Python, Hadoop, Spark, MySQL."
+
+  - company: "Free Contest"
+    role: "Backend Developer"
+    location: "Remote"
+    date: "Oct 2020 -- Jun 2021"
+    details:
+      - "Designed and developed APIs server."
+      - "Technologies: TypeScript, ExpressJS, MySQL."
+
+skills:
+  - category: "Languages"
+    list: ["C/C++", "Python", "Java", "Go", "SQL"]
+  - category: "Technologies"
+    list: ["Linux", "Docker", "Prometheus", "Thanos", "Apache Thrift", "Kafka"]
+  - category: "Core Expertise"
+    list: ["Distributed Systems", "Algorithms", "Data Structures", "System Reliability Engineering"]
+
+honours:
+  - title: "Top 10 in AIOT Innovation Works"
+    date: "2021"
+    location: "HCMC"
+  - title: "Fourth prize in AI Challenge of AISocha 2020"
+    date: "2020"
+    location: "HCMC"
+  - title: "Second Prize in ACM-ICPC Vietnam Southern Provincial Contest"
+    date: "2018"
+  - title: "Third Prize in Vietnamese National Olympiad in Informatics"
+    date: "2018"
+
+projects:
+  - title: "cowboycoder.tech"
+    date: "2018"
+    description: "A website sharing problem solution and code, as well as series of learning tips written or translated in Vietnamese."
+
+publications:
+  - title: "SRGAN with Total Variation Loss in Face Super-Resolution"
+    date: "2020"
+    authors: "Hai Nguyen-Truong, Khoa N. A. Nguyen, San Cao"
+    venue: "7th NAFOSTED Conference on Information and Computer Science (NICS)"
+  - title: "HCMUS at MediaEval 2020: Ensembles of Temporal Deep Neural Networks for Table Tennis Strokes Classification Task"
+    date: "2020"
+    authors: "Hai Nguyen-Truong, San Cao, N. A. Khoa Nguyen, Bang-Dang Pham, et al."
+    venue: "The MediaEval 2020 Multimedia Evaluation Workshop"

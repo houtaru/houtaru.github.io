@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-sys-bg: #0A0A0A;
+  --color-sys-text: #EDEDED;
+  --color-sys-dim: #888888;
+  --color-sys-accent: #0070F3; /* Vercel/System Blue */
+  --color-sys-border: #262626;
+  
+  --font-sans: "Geist Sans", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "SF Mono", Menlo, monospace;
+  
+  --radius-none: 0px;
+  --radius-sm: 2px;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-sys-bg);
+    color: var(--color-sys-text);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    letter-spacing: -0.01em;
+  }
+
+  body {
+    @apply min-h-screen antialiased selection:bg-sys-accent/30;
+  }
+
+  h1, h2, h3 {
+    @apply font-sans font-bold tracking-tight text-sys-text;
+  }
+}
+
+/* System Density & Grid */
+.sys-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1px;
+  background-color: var(--color-sys-border);
+  border: 1px solid var(--color-sys-border);
+}
+
+.sys-cell {
+  @apply bg-sys-bg p-6 transition-colors duration-200;
+}
+
+.sys-cell:hover {
+  @apply bg-neutral-900/50;
+}
+
+/* Terminal-Inspired Code Blocks */
+.sys-code {
+  @apply font-mono text-[13px] text-sys-dim leading-relaxed;
+}
+
+.sys-label {
+  @apply font-mono text-[10px] uppercase tracking-widest text-sys-dim mb-4 block;
+}
+
+/* Animations: Minimal & Precise */
+.sys-reveal {
+  opacity: 0;
+  animation: sysFadeIn 0.4s ease-out forwards;
+}
+
+@keyframes sysFadeIn {
+  to { opacity: 1; }
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }

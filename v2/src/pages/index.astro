@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
+
+const featuredProject = (await getCollection('projects'))[0];
+---
+
+<BaseLayout title="Backend Infrastructure & DB Reliability">
+	<section class="space-y-12 sys-reveal stagger-1">
+		{/* Hero / Terminal Header */}
+		<div class="space-y-4">
+			<h1 class="text-3xl md:text-5xl font-bold tracking-tightest leading-[1.1]">
+				Backend Infrastructure. <br />
+				<span class="text-sys-dim text-2xl md:text-4xl">Reliability, Migration & Observability.</span>
+			</h1>
+			<p class="text-sys-dim max-w-3xl font-mono text-sm leading-relaxed">
+				Managing <span class="text-sys-text">1,000+ DB Clusters</span> at Zalo with 99.9% consistency. 
+				Developed backup agents for <span class="text-sys-text">18TB+ daily data</span>. 
+				Ingesting <span class="text-sys-text">~1M samples/sec</span> for sub-second observability.
+			</p>
+		</div>
+
+		{/* Technical Grid */}
+		<div class="sys-grid mt-24">
+			{/* Pillar 01: Database Backup */}
+			<div class="col-span-12 md:col-span-8 sys-cell border-b border-sys-border md:border-b-0">
+				<span class="sys-label">0x01 / Data Integrity & Reliability</span>
+				<div class="space-y-6">
+					<h2 class="text-2xl font-bold">18TB Daily Data Protection</h2>
+					<div class="sys-code">
+						Engineered a high-performance backup agent with <span class="text-sys-text">reproducible build pipelines</span>. 
+						Implemented weekly production consistency checks and automated restore testing to ensure 100% recoverability 
+						for Zalo's massive data footprint.
+					</div>
+					<div class="flex flex-wrap gap-4 pt-4">
+						{['18TB/Day', 'Hermetic Build', 'Consistency Checks', 'Automated Restore', 'Zero-Drift Releases'].map(tag => (
+							<span class="font-mono text-[10px] px-2 py-1 bg-sys-border text-sys-dim border border-sys-border hover:text-sys-text transition-colors cursor-default">
+								{tag}
+							</span>
+						))}
+					</div>
+				</div>
+			</div>
+
+			{/* Pillar 02: Observability Stats */}
+			<div class="col-span-12 md:col-span-4 sys-cell flex flex-col justify-between">
+				<div>
+					<span class="sys-label">0x02 / Metrics Ingestion</span>
+					<div class="font-mono text-4xl font-bold italic text-sys-accent">~1M/s</div>
+					<div class="sys-code mt-2">Thanos long-term store architecture, cutting storage costs by 3.5x.</div>
+				</div>
+				<div class="mt-12 pt-12 border-t border-sys-border">
+					<span class="sys-label">0x03 / Cluster Scale</span>
+					<div class="font-mono text-4xl font-bold text-sys-text">1,000+</div>
+					<div class="sys-code mt-2">DB clusters maintained with cross-DC automated replication.</div>
+				</div>
+			</div>
+
+			{/* Pillar 03: Migration & Traffic */}
+			<div class="col-span-12 sys-cell border-t border-sys-border">
+				<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+					<div class="max-w-xl">
+						<span class="sys-label">0x04 / Migration & Traffic Routing</span>
+						<h3 class="text-xl font-bold mb-2">99.9% Consistency Migration</h3>
+						<p class="sys-code">
+							Collaborated on multi-DC migrations using <span class="text-sys-text">Java Corelib DNS modules</span> for 
+							seamless traffic switching. Enabled secure cross-DC replication and warm-standby DR.
+						</p>
+					</div>
+					<div class="flex gap-4">
+						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-dim">Warm-Standby</span>
+						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-dim text-sys-accent">99.9% DR</span>
+					</div>
+				</div>
+			</div>
+
+			{/* Blog / Log Stream */}
+			<div class="col-span-12 md:col-span-6 sys-cell border-t border-sys-border md:border-r border-sys-border">
+				<span class="sys-label">0x05 / Technical Blog</span>
+				<div class="space-y-4">
+					{posts.map(post => (
+						<a href={`/v2/blog/${post.slug}`} class="flex justify-between items-center group border-b border-sys-border/50 pb-2 hover:border-sys-accent transition-colors">
+							<span class="font-mono text-[12px] group-hover:text-sys-accent">{post.data.title}</span>
+							<span class="font-mono text-[10px] text-sys-dim">LOG_{post.data.pubDate.getFullYear()}</span>
+						</a>
+					))}
+				</div>
+			</div>
+
+			{/* Backend Tools */}
+			<div class="col-span-12 md:col-span-6 sys-cell border-t border-sys-border">
+				<span class="sys-label">0x06 / Backend & Security</span>
+				<div class="sys-code mb-4">
+					Implemented in-memory encryption for Memcached, securing PII for 70M+ users with &lt;2% latency impact. 
+					Expert in C++, Java, and Apache Thrift.
+				</div>
+				<div class="grid grid-cols-2 gap-4">
+					<div class="p-3 border border-sys-border bg-neutral-900/30">
+						<div class="font-mono text-[10px] text-sys-dim uppercase mb-1">Stack</div>
+						<div class="font-mono text-[12px]">C++ / Java / Thrift</div>
+					</div>
+					<div class="p-3 border border-sys-border bg-neutral-900/30">
+						<div class="font-mono text-[10px] text-sys-dim uppercase mb-1">Impact</div>
+						<div class="font-mono text-[12px]">70M+ MAU Security</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{/* Final CTA */}
+		<div class="pt-24 flex flex-col items-center space-y-8 pb-12">
+			<div class="font-mono text-[11px] text-sys-dim uppercase tracking-[0.5em]">System Status: Online</div>
+			<a href="/v2/cv" class="px-12 py-4 bg-sys-text text-sys-bg font-mono font-bold text-[12px] uppercase tracking-widest hover:bg-sys-accent hover:text-white transition-all shadow-2xl shadow-sys-accent/20">
+				Initialize Professional CV
+			</a>
+		</div>
+	</section>
+</BaseLayout>
