@@ -3,7 +3,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import yaml from 'js-yaml';
 import fs from 'fs';
 
-const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
+interface CV {
+  fullName: string;
+  title: string;
+  location: string;
+  email: string;
+  github: string;
+  summary: string;
+  experience: { role: string; company: string; location: string; date: string; details: string[] }[];
+  education: { school: string; degree: string; date: string; details: string[] }[];
+  skills: { category: string; list: string[] }[];
+  projects: { title: string; description: string; date: string }[];
+  honours: { title: string; date: string }[];
+}
+
+const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8')) as CV;
 ---
 
 <BaseLayout title="Curriculum Vitae" description={`Professional resume of ${cv.fullName}`}>
