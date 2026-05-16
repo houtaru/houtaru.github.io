@@ -1,8 +1,50 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
-<BaseLayout title="Blog">
-	<h1 class="font-serif italic text-4xl mb-12">Blog</h1>
-	<p class="text-cozy-muted italic">Coming soon: Technical thoughts and distributed systems insights.</p>
+<BaseLayout title="Blog" description="Technical thoughts on distributed systems, database reliability, and backend engineering.">
+	<div class="max-w-3xl mx-auto py-12">
+		<header class="mb-16">
+			<h1 class="font-sans font-bold text-5xl mb-6 tracking-tighter uppercase">Blog</h1>
+			<p class="text-sys-muted font-mono text-sm uppercase tracking-widest">Technical Logs & System Insights</p>
+		</header>
+
+		<div class="space-y-20">
+			{posts.map((post) => (
+				<article class="group">
+					<div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+						<h2 class="text-2xl font-bold group-hover:text-sys-accent transition-colors uppercase tracking-tight">
+							<a href={`/blog/${post.id}`} class="no-underline text-sys-text">{post.data.title}</a>
+						</h2>
+						<time class="font-mono text-xs text-sys-muted mt-2 md:mt-0">
+							{post.data.pubDate.toLocaleDateString('en-US', {
+								year: 'numeric',
+								month: 'short',
+								day: 'numeric',
+							})}
+						</time>
+					</div>
+					<p class="text-sys-muted leading-relaxed mb-6 italic">
+						{post.data.description}
+					</p>
+					<div class="flex flex-wrap gap-3">
+						{post.data.tags?.map((tag) => (
+							<span class="font-mono text-[10px] px-2 py-1 bg-sys-accent/5 text-sys-accent border border-sys-accent/20">
+								{tag}
+							</span>
+						))}
+					</div>
+				</article>
+			))}
+		</div>
+
+		{posts.length === 0 && (
+			<p class="text-sys-muted italic font-mono text-sm">No logs found in the system.</p>
+		)}
+	</div>
 </BaseLayout>

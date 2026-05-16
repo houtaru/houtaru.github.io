@@ -3,54 +3,68 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import yaml from 'js-yaml';
 import fs from 'fs';
 
-const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
+interface CV {
+  fullName: string;
+  title: string;
+  location: string;
+  email: string;
+  github: string;
+  summary: string;
+  experience: { role: string; company: string; location: string; date: string; details: string[] }[];
+  education: { school: string; degree: string; date: string; details: string[] }[];
+  skills: { category: string; list: string[] }[];
+  projects: { title: string; description: string; date: string }[];
+  honours: { title: string; date: string }[];
+}
+
+const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8')) as CV;
 ---
 
 <BaseLayout title="Curriculum Vitae" description={`Professional resume of ${cv.fullName}`}>
 	<article class="space-y-10">
 		<header class="border-b border-sys-text/5 pb-6">
-			<h1 class="font-serif italic text-4xl mb-1">{cv.fullName}</h1>
-			<p class="text-sys-muted font-sans text-xs uppercase tracking-[0.2em] mb-4">{cv.title}</p>
+			<h1 class="font-sans font-bold text-4xl mb-1 tracking-tighter uppercase">{cv.fullName}</h1>
+			<p class="text-sys-dim font-mono text-xs uppercase tracking-[0.2em] mb-4">{cv.title}</p>
 			
-			<div class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-sans text-sys-muted">
-				<span class="flex items-center gap-2">
-					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-					{cv.location}
-				</span>
-				<a href={`mailto:${cv.email}`} class="flex items-center gap-2 no-underline hover:text-sys-accent">
+			<div class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-mono text-sys-dim">
+				<a href={`mailto:${cv.email}`} class="flex items-center gap-2 no-underline hover:text-sys-accent transition-colors">
 					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
 					{cv.email}
 				</a>
-				<a href={`https://github.com/${cv.github}`} target="_blank" class="flex items-center gap-2 no-underline hover:text-sys-accent">
+				<a href={`https://github.com/${cv.github}`} target="_blank" class="flex items-center gap-2 no-underline hover:text-sys-accent transition-colors">
 					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
 					{cv.github}
+				</a>
+				<a href={`https://www.linkedin.com/in/${cv.linkedin}`} target="_blank" class="flex items-center gap-2 no-underline hover:text-sys-accent transition-colors">
+					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+					thesancao
 				</a>
 			</div>
 		</header>
 
 		<section>
-			<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Summary</h2>
-			<div class="prose prose-stone">
+			<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] text-sys-dim mb-8">0x01 / Summary</h2>
+			<div class="font-sans text-sm leading-relaxed text-sys-text">
 				<p>{cv.summary}</p>
 			</div>
 		</section>
 
 		<section>
-			<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Experience</h2>
+			<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] text-sys-dim mb-8">0x02 / Experience</h2>
 			<div class="space-y-12">
 				{cv.experience?.map((exp) => (
 					<div class="group">
 						<div class="flex justify-between items-baseline mb-2">
-							<h3 class="font-serif italic text-xl">{exp.role}</h3>
-							<span class="font-sans text-xs text-sys-muted">{exp.date}</span>
+							<h3 class="font-sans font-bold text-lg text-sys-text uppercase tracking-tight">{exp.role}</h3>
+							<span class="font-mono text-[11px] text-sys-text">{exp.date}</span>
 						</div>
 						<div class="flex justify-between items-baseline mb-4">
-							<span class="font-sans text-sm font-bold text-sys-accent uppercase tracking-wider">{exp.company}</span>
-							<span class="font-sans text-xs text-sys-muted/60">{exp.location}</span>
+							<span class="font-mono text-xs font-bold text-sys-accent uppercase tracking-wider">{exp.company}</span>
+							<span class="font-mono text-[10px] text-sys-text uppercase">{exp.location}</span>
 						</div>
 						<ul class="list-none p-0 space-y-2">
 							{exp.details.map((detail) => (
-								<li class="flex gap-3 text-sm text-sys-text/80 leading-relaxed">
+								<li class="flex gap-3 text-[13px] text-sys-text leading-relaxed">
 									<span class="text-sys-accent/40">—</span>
 									<span>{detail}</span>
 								</li>
@@ -62,19 +76,19 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
 		</section>
 
 		<section>
-			<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Education</h2>
+			<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] text-sys-dim mb-8">0x03 / Education</h2>
 			<div class="space-y-8">
 				{cv.education?.map((edu) => (
 					<div>
 						<div class="flex justify-between items-baseline mb-2">
-							<h3 class="font-serif italic text-xl">{edu.school}</h3>
-							<span class="font-sans text-xs text-sys-muted">{edu.date}</span>
+							<h3 class="font-sans font-bold text-lg text-sys-text uppercase tracking-tight">{edu.school}</h3>
+							<span class="font-mono text-[11px] text-sys-text">{edu.date}</span>
 						</div>
-						<p class="font-sans text-sm text-sys-text mb-2">{edu.degree}</p>
+						<p class="font-mono text-xs text-sys-accent uppercase tracking-wide mb-2">{edu.degree}</p>
 						{edu.details && (
 							<ul class="list-none p-0 space-y-2 mb-4">
 								{edu.details.map((detail) => (
-									<li class="text-sm text-sys-muted italic flex gap-3 leading-relaxed">
+									<li class="text-[12px] text-sys-text italic font-sans flex gap-3 leading-relaxed">
 										<span class="text-sys-accent/40">—</span>
 										<span>{detail}</span>
 									</li>
@@ -87,14 +101,14 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
 		</section>
 
 		<section>
-			<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Technical Skills</h2>
+			<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] text-sys-dim mb-8">0x04 / Technical Skills</h2>
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 				{cv.skills?.map((skill) => (
 					<div>
-						<h3 class="font-sans text-xs font-bold uppercase tracking-widest text-sys-accent mb-3">{skill.category}</h3>
+						<h3 class="font-mono text-[11px] font-bold uppercase tracking-widest text-sys-accent mb-3">{skill.category}</h3>
 						<div class="flex flex-wrap gap-2">
 							{skill.list?.map((item) => (
-								<span class="px-3 py-1 bg-sys-accent/5 text-sys-accent rounded-full text-xs font-sans tracking-tight">
+								<span class="px-2 py-1 bg-sys-border text-sys-text border border-sys-border text-[10px] font-mono tracking-tight">
 									{item}
 								</span>
 							))}
@@ -105,27 +119,27 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8'));
 		</section>
 
 		<section>
-			<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Projects</h2>
+			<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] text-sys-dim mb-8">0x05 / Projects</h2>
 			<div class="space-y-6">
 				{cv.projects?.map((project) => (
 					<div class="flex justify-between items-start gap-4">
 						<div class="space-y-1">
-							<h3 class="font-serif italic text-lg">{project.title}</h3>
-							<p class="text-sm text-sys-text/80 leading-relaxed">{project.description}</p>
+							<h3 class="font-sans font-bold text-lg text-sys-text uppercase tracking-tight">{project.title}</h3>
+							<p class="text-[13px] text-sys-text leading-relaxed">{project.description}</p>
 						</div>
-						<span class="font-sans text-xs text-sys-muted shrink-0 mt-1">{project.date}</span>
+						<span class="font-mono text-[11px] text-sys-text shrink-0 mt-1">{project.date}</span>
 					</div>
 				))}
 			</div>
 		</section>
 
 		<section>
-			<h2 class="font-sans text-xs uppercase tracking-[0.3em] text-sys-muted mb-8">Honours</h2>
+			<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] text-sys-dim mb-8">0x06 / Honours</h2>
 			<div class="space-y-4">
 				{cv.honours?.map((honour) => (
-					<div class="flex justify-between items-center py-3 border-b border-sys-text/5 last:border-0">
-						<span class="text-sm font-serif italic">{honour.title}</span>
-						<span class="text-xs font-sans text-sys-muted">{honour.date}</span>
+					<div class="flex justify-between items-center py-3 border-b border-sys-border last:border-0">
+						<span class="text-[13px] font-sans font-bold text-sys-text uppercase tracking-tight">{honour.title}</span>
+						<span class="font-mono text-[11px] text-sys-text">{honour.date}</span>
 					</div>
 				))}
 			</div>
