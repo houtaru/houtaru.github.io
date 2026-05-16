@@ -8,7 +8,8 @@
   --color-sys-accent: #0070F3; /* Vercel/System Blue */
   --color-sys-border: #262626;
   
-  --font-sans: "Geist Sans", system-ui, sans-serif;
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-heading: "Geist Sans", sans-serif;
   --font-mono: "Geist Mono", "SF Mono", Menlo, monospace;
   
   --radius-none: 0px;
@@ -26,10 +27,12 @@
 
   body {
     @apply min-h-screen antialiased selection:bg-sys-accent/30;
+    line-height: 1.6;
   }
 
-  h1, h2, h3 {
-    @apply font-sans font-bold tracking-tight text-sys-text;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply font-bold tracking-tight text-sys-text;
   }
 }
 

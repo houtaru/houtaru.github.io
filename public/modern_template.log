@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.15)  16 MAY 2026 09:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.15)  16 MAY 2026 09:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -760,34 +760,34 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip106
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 176.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 176.
+Package hyperref Info: Option `breaklinks' set `true' on input line 175.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 175.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 17
-6.
+5.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (public/modern_template.aux)
 \openout1 = `modern_template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 176.
-LaTeX Font Info:    ... okay on input line 176.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
 
 (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -811,13 +811,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 176.
-Package microtype Info: Applying patch `item' on input line 176.
-Package microtype Info: Applying patch `toc' on input line 176.
-Package microtype Info: Applying patch `eqnum' on input line 176.
-Package microtype Info: Applying patch `footnote' on input line 176.
-Package microtype Info: Applying patch `verbatim' on input line 176.
-LaTeX Info: Redefining \microtypesetup on input line 176.
+LaTeX Info: Redefining \microtypecontext on input line 175.
+Package microtype Info: Applying patch `item' on input line 175.
+Package microtype Info: Applying patch `toc' on input line 175.
+Package microtype Info: Applying patch `eqnum' on input line 175.
+Package microtype Info: Applying patch `footnote' on input line 175.
+Package microtype Info: Applying patch `verbatim' on input line 175.
+LaTeX Info: Redefining \microtypesetup on input line 175.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -868,14 +868,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \big@size=\dimen284
-Package hyperref Info: Link coloring OFF on input line 176.
+Package hyperref Info: Link coloring OFF on input line 175.
 (public/modern_template.out) (public/modern_template.out)
 \@outlinefile=\write4
 \openout4 = `modern_template.out'.
 
 \makecvheaddetailsbox=\box70
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 179.
+ 178.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -885,53 +885,53 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 179.
+ 178.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 179.
+ 178.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 179.
+ 178.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-79.
+78.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 178.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 179.
+nput line 178.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd
 )
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 179.
+ input line 178.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.
 fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10> not 
 available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 179.
+n input line 178.
 \makecvheadpicturebox=\box71
 \makecvheaddetailswidth=\skip107
 \makecvheadpicturewidth=\skip108
@@ -939,12 +939,12 @@ n input line 179.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <34> not available
-(Font)              size <35.83> substituted on input line 179.
+(Font)              size <35.83> substituted on input line 178.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 188.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 188.
 [1
 
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
@@ -966,11 +966,11 @@ Package rerunfilecheck Info: File `modern_template.out' has not changed.
 (rerunfilecheck)             Checksum: 9BBAA56BEAD804C00B67D3B2E9428C69;504.
  ) 
 Here is how much of TeX's memory you used:
- 26535 strings out of 467525
- 508428 string characters out of 5418982
- 944637 words of memory out of 5000000
- 54906 multiletter control sequences out of 15000+600000
- 658297 words of font info for 139 fonts, out of 8000000 for 9000
+ 26549 strings out of 467525
+ 508620 string characters out of 5418982
+ 944768 words of memory out of 5000000
+ 54910 multiletter control sequences out of 15000+600000
+ 660340 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  129i,13n,136p,1019b,471s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
@@ -978,16 +978,17 @@ me5Brands-Regular.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/fo
 ntawesome5/FontAwesome5Free-Regular.pfb></usr/local/texlive/2026/texmf-dist/fon
 ts/type1/public/cm-super/sfsi1000.pfb></usr/local/texlive/2026/texmf-dist/fonts
 /type1/public/cm-super/sfsi1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
-ype1/public/cm-super/sfss1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
-e1/public/cm-super/sfss1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
-/public/cm-super/sfss1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/p
-ublic/cm-super/sfss3583.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pub
-lic/cm-super/sfsx1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
-c/cm-super/sfsx1095.pfb>
-Output written on public/modern_template.pdf (1 page, 141161 bytes).
+ype1/public/cm-super/sfsi1728.pfb></usr/local/texlive/2026/texmf-dist/fonts/typ
+e1/public/cm-super/sfss1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/cm-super/sfss1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/p
+ublic/cm-super/sfss1440.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pub
+lic/cm-super/sfss3583.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
+c/cm-super/sfsx1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+cm-super/sfsx1095.pfb>
+Output written on public/modern_template.pdf (1 page, 148978 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 500000)
- 43573 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 47669 words of extra memory for PDF output out of 51595 (max. 10000000)
 
