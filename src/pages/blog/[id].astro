@@ -1,0 +1,51 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="max-w-3xl mx-auto py-12">
+    <header class="mb-12">
+      <div class="flex items-center gap-4 text-sys-muted font-mono text-xs mb-4">
+        <time datetime={post.data.pubDate.toISOString()}>
+          {post.data.pubDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </time>
+        {post.data.tags && (
+          <div class="flex gap-2">
+            {post.data.tags.map(tag => (
+              <span class="before:content-['#']">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+      <h1 class="text-4xl md:text-5xl font-serif italic mb-6 leading-tight">{post.data.title}</h1>
+      <p class="text-xl text-sys-muted leading-relaxed italic">{post.data.description}</p>
+    </header>
+
+    <div class="prose prose-sys prose-invert max-w-none">
+      <Content />
+    </div>
+
+    <footer class="mt-24 pt-12 border-t border-sys-border">
+      <a href="/blog" class="font-mono text-sm text-sys-muted hover:text-sys-accent transition-colors flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        Back to blog
+      </a>
+    </footer>
+  </article>
+</BaseLayout>
