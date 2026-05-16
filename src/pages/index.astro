@@ -18,7 +18,7 @@ const featuredProject = (await getCollection('projects'))[0];
 				<span class="text-sys-dim text-2xl md:text-4xl">Reliability, Migration & Observability.</span>
 			</h1>
 			<p class="text-sys-dim max-w-3xl font-mono text-sm leading-relaxed">
-				Managing <span class="text-sys-text">1,000+ DB Clusters</span> at Zalo with 99.9% consistency.
+				Managing <span class="text-sys-text">1,000+ DB Clusters</span> at Zalo with zero-downtime migration.
 				Developed backup agents for <span class="text-sys-text">18TB+ daily data</span>.
 				Ingesting <span class="text-sys-text">~1M samples/sec</span> for sub-second observability.
 			</p>
@@ -65,15 +65,15 @@ const featuredProject = (await getCollection('projects'))[0];
 				<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
 					<div class="max-w-xl">
 						<span class="sys-label">0x04 / Migration & Traffic Routing</span>
-						<h3 class="text-xl font-bold mb-2">99.9% Consistency Migration</h3>
+						<h3 class="text-xl font-bold mb-2">Zero-Downtime Migration</h3>
 						<p class="sys-code">
-							Collaborated on multi-DC migrations using <span class="text-sys-text">Java Corelib DNS modules</span> for
-							seamless traffic switching. Enabled secure cross-DC replication and warm-standby DR.
+							Architected migration protocols and automated cross-DC replication for <span class="text-sys-text">1,000+ DB clusters</span>.
+							Ensured transparent transitions for users with no perceived service interruption.
 						</p>
 					</div>
 					<div class="flex gap-4">
 						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-dim">Warm-Standby</span>
-						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-dim text-sys-accent">99.9% DR</span>
+						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-dim text-sys-accent">Zero-Downtime</span>
 					</div>
 				</div>
 			</div>
@@ -120,3 +120,4 @@ const featuredProject = (await getCollection('projects'))[0];
 		</div>
 	</section>
 </BaseLayout>
+BaseLayout>

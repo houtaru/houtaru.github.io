@@ -22,12 +22,12 @@ experience:
     location: "HCMC"
     date: "May 2022 -- Present"
     details:
-      - "Built automated cross-DC replication for 1,000+ in-house DB clusters, achieving 99.9% consistency and enabling warm-standby DR."
+      - "Engineered zero-downtime migration protocols and automated cross-DC replication for 1,000+ in-house DB clusters."
       - "Designed metrics ingestion pipeline at ~1M samples/sec with ~10s anomaly detection; architected Thanos long-term store, cutting query latency 40% and storage cost 3.5x."
       - "Encryption: added in-memory encryption to Memcached, securing PII for 70M+ MAU with <2% latency impact."
       - "Backup & Restore: engineered daily 10TB+ backup flow with automated recoverability tests and snapshot drift metrics vs prod/previous."
       - "Hermetic Build: created reproducible build pipeline from source to binary, deployed to 2,000+ DB nodes with zero-drift releases."
-      - "Stack: C++, Java, Linux, Prometheus, Thanos, Grafana, Apache Thrift, Docker, Kubernetes."
+      - "Stack: C++, Java, Linux, NoSQL, Prometheus, Thanos, Grafana, Apache Thrift, Docker."
 
   - company: "VNG Corporation"
     role: "Software Engineer Intern"
@@ -42,7 +42,7 @@ skills:
   - category: "Languages"
     list: ["C/C++", "Python", "Java", "Go", "SQL"]
   - category: "Technologies"
-    list: ["Linux", "Docker", "Prometheus", "Thanos", "Apache Thrift", "Kafka"]
+    list: ["Linux", "Docker", "Prometheus", "Thanos", "Apache Thrift", "Message Queue", "NoSQL"]
   - category: "Core Expertise"
     list: ["Distributed Systems", "Algorithms", "Data Structures", "System Reliability Engineering"]
 
