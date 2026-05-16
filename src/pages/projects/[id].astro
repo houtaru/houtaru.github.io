@@ -1,0 +1,54 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({
+    params: { id: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<BaseLayout title={project.data.title} description={project.data.description}>
+  <article class="max-w-3xl mx-auto py-12">
+    <header class="mb-12">
+      <div class="flex items-center gap-4 text-sys-dim font-mono text-xs mb-4">
+        <span>{project.data.year}</span>
+        {project.data.role && (
+          <span class="text-sys-accent uppercase tracking-widest font-bold">{project.data.role}</span>
+        )}
+        {project.data.tags && (
+          <div class="flex gap-2">
+            {project.data.tags.map(tag => (
+              <span class="before:content-['#'] text-sys-dim/60">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+      <h1 class="text-4xl md:text-5xl font-sans font-bold uppercase tracking-tightest mb-6 leading-tight text-sys-text">{project.data.title}</h1>
+      <p class="text-xl text-sys-dim leading-relaxed italic">{project.data.description}</p>
+      {project.data.link && (
+        <a href={project.data.link} target="_blank" class="inline-flex items-center gap-2 mt-6 font-mono text-xs text-sys-accent hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Project Link
+        </a>
+      )}
+    </header>
+
+    <div class="prose prose-sys prose-invert max-w-none">
+      <Content />
+    </div>
+
+    <footer class="mt-24 pt-12 border-t border-sys-border">
+      <a href="/projects" class="font-mono text-sm text-sys-dim hover:text-sys-accent transition-colors flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        Back to Projects
+      </a>
+    </footer>
+  </article>
+</BaseLayout>

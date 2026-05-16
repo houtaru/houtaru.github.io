@@ -56,15 +56,15 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8')) as CV;
 					<div class="group">
 						<div class="flex justify-between items-baseline mb-2">
 							<h3 class="font-sans font-bold text-lg text-sys-text uppercase tracking-tight">{exp.role}</h3>
-							<span class="font-mono text-[11px] text-sys-dim">{exp.date}</span>
+							<span class="font-mono text-[11px] text-sys-text">{exp.date}</span>
 						</div>
 						<div class="flex justify-between items-baseline mb-4">
 							<span class="font-mono text-xs font-bold text-sys-accent uppercase tracking-wider">{exp.company}</span>
-							<span class="font-mono text-[10px] text-sys-dim/60 uppercase">{exp.location}</span>
+							<span class="font-mono text-[10px] text-sys-text uppercase">{exp.location}</span>
 						</div>
 						<ul class="list-none p-0 space-y-2">
 							{exp.details.map((detail) => (
-								<li class="flex gap-3 text-[13px] text-sys-dim leading-relaxed">
+								<li class="flex gap-3 text-[13px] text-sys-text leading-relaxed">
 									<span class="text-sys-accent/40">—</span>
 									<span>{detail}</span>
 								</li>
@@ -82,13 +82,13 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8')) as CV;
 					<div>
 						<div class="flex justify-between items-baseline mb-2">
 							<h3 class="font-sans font-bold text-lg text-sys-text uppercase tracking-tight">{edu.school}</h3>
-							<span class="font-mono text-[11px] text-sys-dim">{edu.date}</span>
+							<span class="font-mono text-[11px] text-sys-text">{edu.date}</span>
 						</div>
 						<p class="font-mono text-xs text-sys-accent uppercase tracking-wide mb-2">{edu.degree}</p>
 						{edu.details && (
 							<ul class="list-none p-0 space-y-2 mb-4">
 								{edu.details.map((detail) => (
-									<li class="text-[12px] text-sys-dim italic font-sans flex gap-3 leading-relaxed">
+									<li class="text-[12px] text-sys-text italic font-sans flex gap-3 leading-relaxed">
 										<span class="text-sys-accent/40">—</span>
 										<span>{detail}</span>
 									</li>
@@ -108,7 +108,7 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8')) as CV;
 						<h3 class="font-mono text-[11px] font-bold uppercase tracking-widest text-sys-accent mb-3">{skill.category}</h3>
 						<div class="flex flex-wrap gap-2">
 							{skill.list?.map((item) => (
-								<span class="px-2 py-1 bg-sys-border text-sys-dim border border-sys-border text-[10px] font-mono tracking-tight">
+								<span class="px-2 py-1 bg-sys-border text-sys-text border border-sys-border text-[10px] font-mono tracking-tight">
 									{item}
 								</span>
 							))}
@@ -125,9 +125,9 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8')) as CV;
 					<div class="flex justify-between items-start gap-4">
 						<div class="space-y-1">
 							<h3 class="font-sans font-bold text-lg text-sys-text uppercase tracking-tight">{project.title}</h3>
-							<p class="text-[13px] text-sys-dim leading-relaxed">{project.description}</p>
+							<p class="text-[13px] text-sys-text leading-relaxed">{project.description}</p>
 						</div>
-						<span class="font-mono text-[11px] text-sys-dim shrink-0 mt-1">{project.date}</span>
+						<span class="font-mono text-[11px] text-sys-text shrink-0 mt-1">{project.date}</span>
 					</div>
 				))}
 			</div>
@@ -139,7 +139,7 @@ const cv = yaml.load(fs.readFileSync('./src/data/cv.yaml', 'utf8')) as CV;
 				{cv.honours?.map((honour) => (
 					<div class="flex justify-between items-center py-3 border-b border-sys-border last:border-0">
 						<span class="text-[13px] font-sans font-bold text-sys-text uppercase tracking-tight">{honour.title}</span>
-						<span class="font-mono text-[11px] text-sys-dim">{honour.date}</span>
+						<span class="font-mono text-[11px] text-sys-text">{honour.date}</span>
 					</div>
 				))}
 			</div>

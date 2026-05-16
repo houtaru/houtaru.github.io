@@ -55,7 +55,7 @@
 
 /* Terminal-Inspired Code Blocks */
 .sys-code {
-  @apply font-mono text-[13px] text-sys-dim leading-relaxed;
+  @apply font-mono text-[13px] text-sys-text leading-relaxed;
 }
 
 .sys-label {

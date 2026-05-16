@@ -3,7 +3,7 @@ title: "FreeContest"
 description: "Problem Setter for Vietnam's premier competitive programming platform, preparing content for National Olympiad (VOI) candidates."
 year: "2019 - 2021"
 role: "Problem Setter"
-link: "https://freecontest.net"
+link: "https://www.facebook.com/kc97blf"
 tags: ["Competitive Programming", "Algorithms", "VOI", "Problem Setting"]
 ---
 
