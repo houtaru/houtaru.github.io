@@ -20,5 +20,13 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# LaTeX build artifacts
+public/*.aux
+public/*.log
+public/*.out
+public/*.pdf
+public/*.toc
+public/*.synctex.gz
+
 # jetbrains setting folder
 .idea/
