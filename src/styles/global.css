@@ -2,11 +2,11 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-sys-bg: #0A0A0A;
-  --color-sys-text: #EDEDED;
-  --color-sys-dim: #888888;
+  --color-sys-bg: #FDFBF7;
+  --color-sys-text: #1A1A1A;
+  --color-sys-dim: #656D76;
   --color-sys-accent: #0070F3; /* Vercel/System Blue */
-  --color-sys-border: #262626;
+  --color-sys-border: #E5E5E5;
   
   --font-sans: "Inter Variable", system-ui, sans-serif;
   --font-heading: "Geist Sans", sans-serif;
@@ -50,7 +50,7 @@
 }
 
 .sys-cell:hover {
-  @apply bg-neutral-900/50;
+  @apply bg-black/5;
 }
 
 /* Terminal-Inspired Code Blocks */
