@@ -1,11 +1,11 @@
 ---
-title: "The Great Refactor: Migrating from Vim to Neovim"
+title: "Refactor: Migrating from Vim to Neovim"
 description: "How I rebuilt my developer workflow for 2026, focusing on Lua-based configuration, LSP performance, and dotfile ergonomics."
 pubDate: 2026-05-16
 tags: ["Workflow", "Neovim", "Lua", "Dotfiles"]
 ---
 
-# The Great Refactor: Migrating from Vim to Neovim
+# Refactor: Migrating from Vim to Neovim
 
 *Drafting in progress...*
 

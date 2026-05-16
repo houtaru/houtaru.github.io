@@ -1,10 +1,14 @@
 ---
-title: "KC97BLE FreeContest"
-description: "Leading the problem setting and automated judging system for Vietnam's premier competitive programming contest."
+title: "FreeContest"
+description: "Problem Setter for Vietnam's premier competitive programming platform, preparing content for National Olympiad (VOI) candidates."
 year: "2019 - 2021"
-role: "Problem Setter & Core Developer"
-link: "https://github.com/freecontest"
-tags: ["Golang", "Sandbox", "Competitive Programming"]
+role: "Problem Setter"
+link: "https://freecontest.net"
+tags: ["Competitive Programming", "Algorithms", "VOI", "Problem Setting"]
 ---
 
-Redesigned the automated judging sandbox for security and high-performance execution of student submissions.
+Collaborated with technical teams to engineer weekly competitive programming contests on the self-hosted FreeContest platform. Focused on providing high-fidelity training for high school students preparing for the Vietnam National Olympiad in Informatics (VOI).
+
+- **Problem Engineering:** Authored rigorous problem statements, defined technical constraints, and designed edge-case verification samples.
+- **Testsuite Development:** Generated robust, high-coverage test datasets to ensure submission validity and judging accuracy.
+- **Technical Editorials:** Drafted comprehensive solution documents detailing optimal algorithmic approaches, complexity analysis, and implementation strategies.
