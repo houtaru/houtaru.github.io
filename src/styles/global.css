@@ -46,7 +46,7 @@
 }
 
 .sys-cell {
-  @apply bg-sys-bg p-6 transition-colors duration-200;
+  @apply bg-sys-bg p-4 transition-colors duration-200;
 }
 
 .sys-cell:hover {
@@ -55,11 +55,11 @@
 
 /* Terminal-Inspired Code Blocks */
 .sys-code {
-  @apply font-mono text-[13px] text-sys-text leading-relaxed;
+  @apply font-mono text-[14px] text-sys-text leading-relaxed;
 }
 
 .sys-label {
-  @apply font-mono text-[10px] uppercase tracking-widest text-sys-dim mb-4 block;
+  @apply font-mono text-[11px] uppercase tracking-widest text-sys-dim mb-4 block;
 }
 
 /* Animations: Minimal & Precise */

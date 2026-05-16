@@ -13,7 +13,7 @@ const projects = (await getCollection('projects'))
 <BaseLayout title="Backend Infrastructure & DB Reliability">
 	<section class="space-y-12 sys-reveal stagger-1">
 		{/* Hero / Terminal Header */}
-		<div class="space-y-4">
+		<div class="space-y-4 px-0">
 			<h1 class="text-3xl md:text-5xl font-bold tracking-tightest leading-[1.1]">
 				Backend Infrastructure. <br />
 				<span class="text-sys-dim text-2xl md:text-4xl">Reliability, Migration & Observability.</span>
@@ -37,9 +37,9 @@ const projects = (await getCollection('projects'))
 						Implemented weekly production consistency checks and automated restore testing to ensure 100% recoverability
 						for Zalo's massive data footprint.
 					</div>
-					<div class="flex flex-wrap gap-4 pt-4">
-						{['18TB/Day', 'Hermetic Build', 'Consistency Checks', 'Automated Restore', 'Zero-Drift Releases'].map(tag => (
-							<span class="font-mono text-[10px] px-2 py-1 bg-sys-border text-sys-text border border-sys-border hover:text-sys-text transition-colors cursor-default">
+					<div class="flex flex-wrap gap-2 pt-4">
+						{['18TB/Day', 'Hermetic Build', 'Consistency Check', 'Auto-Restore', 'Zero Copy'].map(tag => (
+							<span class="font-mono text-[11px] px-2 py-1 border border-sys-border/50 text-sys-text uppercase tracking-tighter">
 								{tag}
 							</span>
 						))}
@@ -72,9 +72,10 @@ const projects = (await getCollection('projects'))
 							Ensured transparent transitions for users with no perceived service interruption.
 						</p>
 					</div>
-					<div class="flex gap-4">
-						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-text">Warm-Standby</span>
-						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-text">Zero-Downtime</span>
+					<div class="flex flex-wrap gap-2 md:justify-end">
+						{['Warm-Standby', 'Cross-DC', 'Zero-Downtime'].map(tag => (
+							<span class="font-mono text-[11px] px-2 py-1 border border-sys-border/50 text-sys-text uppercase tracking-tighter">{tag}</span>
+						))}
 					</div>
 				</div>
 			</div>
@@ -86,12 +87,11 @@ const projects = (await getCollection('projects'))
 					<div class="flex-1">
 						<div class="sys-code mb-6">
 							Implemented in-memory encryption for Memcached, securing PII for 70M+ users with &lt;2% latency impact.
-							Expert in C++, Java, and Apache Thrift.
 						</div>
 						<div class="grid grid-cols-2 gap-4">
 							<div class="p-3 border border-sys-border bg-black/5">
 								<div class="font-mono text-[10px] text-sys-dim uppercase mb-1">Stack</div>
-								<div class="font-mono text-[12px]">C++ / Java / Thrift</div>
+								<div class="font-mono text-[12px]">C/C++</div>
 							</div>
 							<div class="p-3 border border-sys-border bg-black/5">
 								<div class="font-mono text-[10px] text-sys-dim uppercase mb-1">Impact</div>
@@ -100,8 +100,8 @@ const projects = (await getCollection('projects'))
 						</div>
 					</div>
 					<div class="md:w-1/3 flex flex-wrap gap-2 content-start">
-						{['Memcached', 'AES-NI', 'PII Security', 'Apache Thrift', 'C++', 'Java', 'Distributed Systems'].map(tag => (
-							<span class="font-mono text-[9px] px-2 py-1 border border-sys-border/50 text-sys-text uppercase tracking-tighter">{tag}</span>
+						{['Memcached', 'AES-NI', 'PII Security', 'C/C++', "NUMA"].map(tag => (
+							<span class="font-mono text-[11px] px-2 py-1 border border-sys-border/50 text-sys-text uppercase tracking-tighter">{tag}</span>
 						))}
 					</div>
 				</div>
@@ -125,9 +125,9 @@ const projects = (await getCollection('projects'))
 				<span class="sys-label">0x07 / Featured Projects</span>
 				<div class="space-y-4">
 					{projects.map(project => (
-						<a href={`/projects/${project.id}`} class="flex justify-between items-center group border-b border-sys-border/50 pb-2 hover:border-sys-accent transition-colors">
+						<a href={`/project/${project.id}`} class="flex justify-between items-center group border-b border-sys-border/50 pb-2 hover:border-sys-accent transition-colors">
 							<span class="font-mono text-[12px] group-hover:text-sys-accent">{project.data.title}</span>
-							<span class="font-mono text-[10px] text-sys-text upercase">PROJ_{project.data.year}</span>
+							<span class="font-mono text-[11px] text-sys-text uppercase">PROJ_{project.data.year}</span>
 						</a>
 					))}
 				</div>

@@ -26,21 +26,21 @@ const { title, description = "San Cao (houtaru) - Backend Engineer" } = Astro.pr
 		<ClientRouter />
 	</head>
 	<body class="bg-sys-bg">
-		<header class="sticky top-0 z-50 bg-sys-bg/95 backdrop-blur-sm border-b border-sys-border/40 sys-reveal">
-			<div class="max-w-5xl mx-auto px-4 md:px-8 py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+		<header class="fixed top-0 left-0 right-0 z-[100] bg-sys-bg/80 backdrop-blur-md border-b border-sys-border/40" transition:persist>
+			<div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 sys-reveal">
 				<div class="space-y-1">
 					<a href="/" class="font-sans font-bold text-xl tracking-tighter uppercase text-sys-text no-underline">San Cao</a>
-					<div class="font-mono text-[10px] text-sys-dim uppercase tracking-widest">Backend Engineer • Infrastructure</div>
+					<div class="font-mono text-[11px] text-sys-dim uppercase tracking-widest">Backend Engineer • Infrastructure</div>
 				</div>
 				<nav class="flex gap-6 font-mono text-[11px] font-bold uppercase tracking-widest text-sys-dim">
 					<a href="/cv" class="hover:text-sys-text transition-colors">CV</a>
-					<a href="/projects" class="hover:text-sys-text transition-colors">Project</a>
+					<a href="/project" class="hover:text-sys-text transition-colors">Project</a>
 					<a href="/blog" class="hover:text-sys-text transition-colors">Blog</a>
 				</nav>
 			</div>
 		</header>
 		
-		<div class="max-w-5xl mx-auto px-4 md:px-8 py-12">
+		<div class="max-w-6xl mx-auto px-4 pt-32 pb-12">
 			<main>
 				<slot />
 			</main>

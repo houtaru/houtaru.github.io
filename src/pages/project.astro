@@ -6,10 +6,10 @@ const projects = await getCollection('projects');
 ---
 
 <BaseLayout title="Projects" description="A collection of systems engineering, database reliability, and performance-oriented projects.">
-	<div class="max-w-4xl mx-auto">
-		<header class="mb-16">
-			<h1 class="font-sans font-bold text-5xl mb-6 tracking-tighter uppercase">Project</h1>
-			<p class="text-sys-muted font-mono text-sm uppercase tracking-widest">Selected Engineering Works</p>
+	<section class="max-w-4xl space-y-16 sys-reveal">
+		<header>
+			<h1 class="font-sans font-bold text-5xl mb-6 tracking-tightest uppercase">Project</h1>
+			<p class="text-sys-dim font-mono text-sm uppercase tracking-widest">Selected Engineering Works</p>
 		</header>
 
 		<div class="sys-grid">
@@ -17,22 +17,22 @@ const projects = await getCollection('projects');
 				<div class="col-span-12 sys-cell border-b border-sys-border last:border-0 pb-12">
 					<span class="sys-label">{project.data.year}</span>
 					<div class="flex flex-col md:flex-row justify-between items-start gap-6">
-						<div class="space-y-4 max-w-2xl">
+						<div class="space-y-4">
 							<h2 class="text-3xl font-bold uppercase tracking-tight text-sys-accent">{project.data.title}</h2>
-							<p class="sys-code text-sys-muted leading-relaxed">
+							<p class="sys-code text-sys-dim leading-relaxed">
 								{project.data.description}
 							</p>
 							<div class="flex flex-wrap gap-3 pt-2">
 								{project.data.tags?.map((tag) => (
-									<span class="font-mono text-[10px] px-2 py-1 bg-black/5 border border-sys-border text-sys-dim">
+									<span class="font-mono text-[11px] px-2 py-1 bg-black/5 border border-sys-border text-sys-dim uppercase tracking-tighter">
 										{tag}
 									</span>
 								))}
 							</div>
 						</div>
-						
+
 						{project.data.link && (
-							<a href={project.data.link} target="_blank" class="px-6 py-2 border border-sys-accent text-sys-accent font-mono text-[10px] uppercase tracking-widest hover:bg-sys-accent hover:text-white transition-all shrink-0">
+							<a href={project.data.link} target="_blank" class="px-6 py-2 border border-sys-accent text-sys-accent font-mono text-[11px] uppercase tracking-widest hover:bg-sys-accent hover:text-white transition-all shrink-0">
 								View Source
 							</a>
 						)}
@@ -42,7 +42,7 @@ const projects = await getCollection('projects');
 		</div>
 
 		{projects.length === 0 && (
-			<p class="text-sys-muted italic font-mono text-sm">No project records found.</p>
+			<p class="text-sys-dim italic font-mono text-sm">No project records found.</p>
 		)}
-	</div>
+	</section>
 </BaseLayout>
