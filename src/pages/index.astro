@@ -39,7 +39,7 @@ const projects = (await getCollection('projects'))
 					</div>
 					<div class="flex flex-wrap gap-4 pt-4">
 						{['18TB/Day', 'Hermetic Build', 'Consistency Checks', 'Automated Restore', 'Zero-Drift Releases'].map(tag => (
-							<span class="font-mono text-[10px] px-2 py-1 bg-sys-border text-sys-dim border border-sys-border hover:text-sys-text transition-colors cursor-default">
+							<span class="font-mono text-[10px] px-2 py-1 bg-sys-border text-sys-text border border-sys-border hover:text-sys-text transition-colors cursor-default">
 								{tag}
 							</span>
 						))}
@@ -73,8 +73,8 @@ const projects = (await getCollection('projects'))
 						</p>
 					</div>
 					<div class="flex gap-4">
-						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-dim">Warm-Standby</span>
-						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-dim text-sys-accent">Zero-Downtime</span>
+						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-text">Warm-Standby</span>
+						<span class="font-mono text-[11px] font-bold px-4 py-2 border border-sys-border text-sys-text">Zero-Downtime</span>
 					</div>
 				</div>
 			</div>
@@ -101,7 +101,7 @@ const projects = (await getCollection('projects'))
 					</div>
 					<div class="md:w-1/3 flex flex-wrap gap-2 content-start">
 						{['Memcached', 'AES-NI', 'PII Security', 'Apache Thrift', 'C++', 'Java', 'Distributed Systems'].map(tag => (
-							<span class="font-mono text-[9px] px-2 py-1 border border-sys-border/50 text-sys-dim uppercase tracking-tighter">{tag}</span>
+							<span class="font-mono text-[9px] px-2 py-1 border border-sys-border/50 text-sys-text uppercase tracking-tighter">{tag}</span>
 						))}
 					</div>
 				</div>
@@ -114,7 +114,7 @@ const projects = (await getCollection('projects'))
 					{posts.map(post => (
 						<a href={`/blog/${post.id}`} class="flex justify-between items-center group border-b border-sys-border/50 pb-2 hover:border-sys-accent transition-colors">
 							<span class="font-mono text-[12px] group-hover:text-sys-accent">{post.data.title}</span>
-							<span class="font-mono text-[10px] text-sys-dim uppercase">LOG_{post.data.pubDate.getFullYear()}</span>
+							<span class="font-mono text-[10px] text-sys-text uppercase">LOG_{post.data.pubDate.getFullYear()}</span>
 						</a>
 					))}
 				</div>
@@ -127,7 +127,7 @@ const projects = (await getCollection('projects'))
 					{projects.map(project => (
 						<a href={`/projects/${project.id}`} class="flex justify-between items-center group border-b border-sys-border/50 pb-2 hover:border-sys-accent transition-colors">
 							<span class="font-mono text-[12px] group-hover:text-sys-accent">{project.data.title}</span>
-							<span class="font-mono text-[10px] text-sys-dim uppercase">PROJ_{project.data.year}</span>
+							<span class="font-mono text-[10px] text-sys-text upercase">PROJ_{project.data.year}</span>
 						</a>
 					))}
 				</div>
@@ -136,7 +136,7 @@ const projects = (await getCollection('projects'))
 
 		{/* Final CTA */}
 		<div class="pt-24 flex flex-col items-center space-y-8 pb-12">
-			<div class="font-mono text-[11px] text-sys-dim uppercase tracking-[0.5em]">System Status: Online</div>
+			<div class="font-mono text-[11px] text-sys-dim uppercase tracking-[0.5em]">Uptime: 99.9%</div>
 			<a href="/cv" class="px-12 py-4 bg-sys-text text-sys-bg font-mono font-bold text-[12px] uppercase tracking-widest hover:bg-sys-accent hover:text-white transition-all shadow-2xl shadow-sys-accent/20">
 				MY RESUMÉ
 			</a>
